@@ -1,5 +1,6 @@
 package com.sun.naruto.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -22,6 +23,7 @@ public class User implements UserDetails {
     private UUID id;
     private String username;
     private String nickName;
+    @JsonIgnore
     private String password;
 
 
@@ -61,7 +63,7 @@ public class User implements UserDetails {
      */
     @Override
     public String getPassword() {
-        return null;
+        return this.password;
     }
 
     /**

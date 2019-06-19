@@ -1,4 +1,4 @@
-package com.sun.naruto.domain;
+package com.sun.naruto.domain.base.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;

@@ -11,6 +11,8 @@
     <modules>
         <module>naruto-util</module>
         <module>naruto-login</module>
+        <module>naruto-game</module>
+        <module>naruto-domain</module>
     </modules>
 
     <parent>
@@ -23,11 +25,19 @@
     <properties>
         <spring-security.version>5.1.5.RELEASE</spring-security.version>
         <lombok.version>1.18.8</lombok.version>
+        <naruto.version>${project.version}</naruto.version>
     </properties>
 
 
     <dependencyManagement>
         <dependencies>
+            <!--项目自身的依赖-->
+            <dependency>
+                <groupId>com.sun.platform</groupId>
+                <artifactId>naruto-domain</artifactId>
+                <version>${naruto.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-core</artifactId>

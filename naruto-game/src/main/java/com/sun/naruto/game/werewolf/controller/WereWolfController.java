@@ -8,9 +8,9 @@ import com.sun.naruto.domain.werewolf.match.WereWolfType;
 import com.sun.naruto.domain.werewolf.match.WolfGame;
 import com.sun.naruto.game.werewolf.model.CreateParam;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -69,5 +69,11 @@ public class WereWolfController {
                 throw new IllegalArgumentException("未知类型");
         }
         return game;
+    }
+
+    @PostMapping("{gameCode}")
+    public void apply(@PathVariable String gameCode){
+        //todo 根据code查询,添加参与者
+
     }
 }

@@ -1,12 +1,10 @@
 package com.sun.naruto.domain.werewolf.match;
 
 import com.sun.naruto.domain.base.Player;
-import com.sun.naruto.domain.base.entity.User;
 import com.sun.naruto.domain.werewolf.role.WolfRole;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -37,6 +37,11 @@
                 <artifactId>naruto-domain</artifactId>
                 <version>${naruto.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.sun.platform</groupId>
+                <artifactId>naruto-game</artifactId>
+                <version>${naruto.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springframework.security</groupId>

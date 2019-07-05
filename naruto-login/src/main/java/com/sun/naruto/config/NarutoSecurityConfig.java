@@ -3,6 +3,7 @@ package com.sun.naruto.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -33,5 +34,16 @@ public class NarutoSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin().and().authorizeRequests().anyRequest().permitAll().and().csrf().disable();
+    }
+
+    /**
+     * Override this method to configure {@link WebSecurity}. For example, if you wish to
+     * ignore certain requests.
+     *
+     * @param web
+     */
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/**/*.html","/public/**");
     }
 }

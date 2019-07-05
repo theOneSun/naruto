@@ -21,4 +21,8 @@ public class Player {
      * 参加游戏的id
      */
     private UUID gameId;
+    /**
+     * 昵称
+     */
+    private String nickname;
 }

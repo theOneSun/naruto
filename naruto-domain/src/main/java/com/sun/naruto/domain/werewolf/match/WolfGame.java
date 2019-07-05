@@ -35,4 +35,13 @@ public interface WolfGame {
 
     List<Player> getPlayers();
 
+    void distributeRole();
+
+    /**
+     * 查询玩家的角色
+     *
+     * @param player player
+     * @return player's role
+     */
+    WolfRole selectPlayerRole(Player player);
 }

@@ -1,13 +1,13 @@
 package com.sun.naruto.domain.werewolf.role;
 
-import lombok.Getter;
+import lombok.Data;
 
 /**
  * 平民
  *
  * @author sunjian.
  */
-@Getter
+@Data
 public class Civilian implements WolfRole {
     private final String name = "平民";
     private final String desc = "只在白天拥有投票权";
